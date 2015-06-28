@@ -12,6 +12,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.5.0",
+        "soloproyectos-php/text": "dev-master",
         "soloproyectos-php/text-tokenizer": "dev-master"
     },
     "autoload": {
