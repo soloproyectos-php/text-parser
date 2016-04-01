@@ -99,8 +99,10 @@ abstract class TextParser extends TextTokenizer
      */
     public function parse($string = "")
     {
-        $this->offset = 0;
-        $this->string = func_num_args() > 0 ? $string : $this->string;
+        if (func_num_args() > 0) {
+            $this->string = $string;
+            $this->offset = 0;
+        }
 
         $ungreedy = TextParser::UNGREEDY & $this->_flags;
         $ret = $this->evaluate();
