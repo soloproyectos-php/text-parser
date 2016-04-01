@@ -52,7 +52,7 @@ abstract class TextParser extends TextTokenizer
         $this->_target = $target;
         $this->_flags = $flags;
 
-        if ($this->_target instanceof Parser) {
+        if ($this->_target instanceof TextParser) {
             parent::__construct($target->getString(), $flags);
             $this->offset = $target->getOffset();
         } else {
